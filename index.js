@@ -1,22 +1,34 @@
 require("dotenv").config();
 const express = require("express");
-const UserRoutes = require("./backend/Routes/Users"); // Correct import
+const mongoose = require("mongoose");
+const cors = require("cors"); 
+const UserRoutes = require("./backend/Routes/Users"); 
 
 const port = process.env.PORT || 8000;
 const app = express();
 
-// Middlewares
+//  Middleware: Enable CORS for frontend requests
+app.use(cors());
+
+//  Middleware: Parse JSON and URL-encoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Test route
-app.get('/', (req, res) => {
-    res.send("Working properly");
+//  MongoDB Connection with error handling
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+    .then(() => console.log("✅ MongoDB connected successfully"))
+    .catch((err) => console.error("❌ MongoDB connection error:", err));
+
+//  Test Route
+app.get("/", (req, res) => {
+    res.send("🚀 Server is running properly!");
 });
 
-// Use UserRoutes correctly
-app.use('/api/user', UserRoutes);
+app.use("/api/user", UserRoutes);
 
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+    console.log(`🚀 Server running at http://localhost:${port}`);
 });
