@@ -41,6 +41,17 @@
         opacity: 1;
     }
 }
+@keyframes top_to_down {
+    from {
+        transform: translatey(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
 
 .logo-animation {
     animation: fadeInUp 0.7s ease-in-out forwards;
@@ -52,6 +63,9 @@
 
 .right-section {
     animation: fadeInRight 0.7s ease-in-out forwards;
+}
+.top-section {
+    animation: top_to_down 0.7s ease-in-out forwards;
 }
 
 .hidden {
