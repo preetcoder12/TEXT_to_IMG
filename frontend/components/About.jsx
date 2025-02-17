@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
     return (
-        <div className="min-h-screen bg-gray-100 text-gray-800">
+        <div className="min-h-screen bg-gray-100 text-gray-800 mt-16">
 
             {/* Hero Section */}
             <section className="relative w-full h-[500px] flex items-center justify-center bg-gradient-to-r from-purple-500 via-blue-600 to-pink-600">

@@ -35,21 +35,15 @@ const Navbar = () => {
     return (
         <>
             {user && (
-                <nav className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white p-4 fixed w-full top-0 z-50 shadow-md transition-all">
+                <nav className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white p-4 fixed w-full top-0 z-50 shadow-md transition-all  top-section ">
                     <div className="max-w-7xl mx-auto flex justify-between items-center">
                         {/* Logo */}
                         <Link to="/" className="text-2xl font-bold tracking-wide">AI ImageGen</Link>
                         {/* Desktop Navigation - Now Visible on Desktop */}
-                        <div className="flex flex-col md:flex-row md:space-x-6 items-center sm:hidden">
+                        <div className="flex flex-col md:flex-row md:space-x-6 items-center ">
                             <Link to="/" className="hover:text-blue-500 transition-all">Home</Link>
                             <Link to="/about" className="hover:text-blue-500 transition-all">About</Link>
                             <p className="text-green-500 font-semibold">Credits: {credits}</p>
-                            <button
-                                onClick={toggleDarkMode}
-                                className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all"
-                            >
-                                {darkMode ? <FaSun /> : <FaMoon />}
-                            </button>
                             <button
                                 onClick={handleLogout}
                                 className="bg-red-500 text-white px-4 py-2 rounded-md shadow-lg hover:bg-red-600 transition-all"
