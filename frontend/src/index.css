@@ -1,0 +1,59 @@
+.orbitron {
+    font-family: orbitron;
+}
+
+.poopins {
+    font-family: Poppins;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.logo-animation {
+    animation: fadeInUp 0.7s ease-in-out forwards;
+}
+
+.left-section {
+    animation: fadeInLeft 0.7s ease-in-out forwards;
+}
+
+.right-section {
+    animation: fadeInRight 0.7s ease-in-out forwards;
+}
+
+.hidden {
+    opacity: 0;
+}
