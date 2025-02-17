@@ -1,8 +1,9 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors"); 
-const UserRoutes = require("./backend/Routes/Users"); 
+const cors = require("cors");
+const UserRoutes = require("./Routes/Users");
+const Api_fetched = require("./Routes/Api")
 
 const port = process.env.PORT || 8000;
 const app = express();
@@ -28,6 +29,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/user", UserRoutes);
+app.use("/api", Api_fetched);
+
 
 app.listen(port, () => {
     console.log(`🚀 Server running at http://localhost:${port}`);
