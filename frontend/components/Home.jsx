@@ -45,7 +45,7 @@ const Home = () => {
             return;
         }
         try {
-            const response = await axios.post("http://localhost:1000/api/text", { prompt: text }, { responseType: "arraybuffer" });
+            const response = await axios.post("https://text-to-img-backend.onrender.com/api/text", { prompt: text }, { responseType: "arraybuffer" });
             const imageUrl = URL.createObjectURL(new Blob([response.data]));
             setImage(imageUrl);
             const newcredits = credits - 1;
