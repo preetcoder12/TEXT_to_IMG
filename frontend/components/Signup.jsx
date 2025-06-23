@@ -19,7 +19,7 @@ const Signup = () => {
         setSuccess(null);
 
         try {
-            const response = await axios.post("http://localhost:5000/api/user/signup", {
+            const response = await axios.post("https://text-to-img-backend.onrender.com/api/user/signup", {
                 username,
                 email,
                 password,
