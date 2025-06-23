@@ -19,11 +19,7 @@ const SignIn = ({ setIsLoggedIn }) => {
         setLoading(true);
 
         try {
-<<<<<<< HEAD
-            const response = await axios.post("http://localhost:1000/api/user/signin", {
-=======
             const response = await axios.post("http://localhost:5000/api/user/signin", {
->>>>>>> 9e52e56 (tested ok)
                 email,
                 password,
             });
