@@ -19,11 +19,7 @@ const Signup = () => {
         setSuccess(null);
 
         try {
-<<<<<<< HEAD
-            const response = await axios.post("http://localhost:1000/api/user/signup", {
-=======
             const response = await axios.post("http://localhost:5000/api/user/signup", {
->>>>>>> 9e52e56 (tested ok)
                 username,
                 email,
                 password,
