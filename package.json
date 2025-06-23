@@ -11,7 +11,11 @@
   },
   "dependencies": {
     "axios": "^1.7.9",
+<<<<<<< HEAD
     "bcrypt": "^5.1.1",
+=======
+    "bcryptjs": "^3.0.2",
+>>>>>>> 9e52e56 (tested ok)
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
